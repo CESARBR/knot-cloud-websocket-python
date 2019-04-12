@@ -4,10 +4,26 @@ knot\_cloud\_websocket package
 Submodules
 ----------
 
+knot\_cloud\_websocket.client module
+------------------------------------
+
+.. automodule:: knot_cloud_websocket.client
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 knot\_cloud\_websocket.factory module
 -------------------------------------
 
 .. automodule:: knot_cloud_websocket.factory
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+knot\_cloud\_websocket.message module
+-------------------------------------
+
+.. automodule:: knot_cloud_websocket.message
     :members:
     :undoc-members:
     :show-inheritance:
