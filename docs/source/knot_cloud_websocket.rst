@@ -12,6 +12,14 @@ knot\_cloud\_websocket.client module
     :undoc-members:
     :show-inheritance:
 
+knot\_cloud\_websocket.exception module
+---------------------------------------
+
+.. automodule:: knot_cloud_websocket.exception
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 knot\_cloud\_websocket.factory module
 -------------------------------------
 

@@ -14,3 +14,23 @@ class IdentityRequestMessage:
     id: str
     token: str
     type: str = 'identity'
+
+
+@dataclass
+class ReadyResponseMessage:
+    '''
+    Represents 'ready' message.
+    '''
+
+    type: str = 'ready'
+
+
+@dataclass
+class ErrorResponseMessage:
+    '''
+    Represents 'error' message.
+    '''
+
+    code: int
+    message: str
+    type: str = 'error'
