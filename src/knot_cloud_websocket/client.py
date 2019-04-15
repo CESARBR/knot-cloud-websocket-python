@@ -5,7 +5,8 @@
 import json
 
 from .exception import UnknownMessageError
-from .mapper import error_response, identity_request, ready_response
+from .mapper import (data_event, error_response, identity_request,
+                     ready_response)
 from .message import IdentityRequestMessage
 
 
@@ -19,7 +20,8 @@ class Client:
         self.__send_mappers = {'identity': identity_request}
         self.__recv_mappers = {
             'error': error_response,
-            'ready': ready_response
+            'ready': ready_response,
+            'data': data_event
         }
 
     async def identity(self, credential_id, credential_token):

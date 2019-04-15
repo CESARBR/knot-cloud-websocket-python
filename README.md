@@ -30,7 +30,21 @@ async def main():
                 credential_id='e9662e36-e99b-4508-80f9-168a3bbddf7a',
                 credential_token='a4ed4893fd591a23f65d32ba7922afc170c0cfa9'
         ) as client:
-        pass
+```
+
+Listen to data messages:
+
+```python
+        ) as client:
+        print("Waiting for messages")
+        while True:
+            try:
+                message = await client.receive()
+                print("Received ${type}".format(type=type(message)))
+                print(message)
+            except Exception as e:
+                print("An error occurred")
+                print(e)
 ```
 
 Add this coroutine to an event loop:
