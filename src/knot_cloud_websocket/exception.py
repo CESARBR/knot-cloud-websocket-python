@@ -7,3 +7,9 @@ class UnknownMessageError(Exception):
     '''
     Raised when an unknown message is received.
     '''
+
+
+class AuthenticationError(Exception):
+    '''
+    Raised when an authentication error occurs.
+    '''
