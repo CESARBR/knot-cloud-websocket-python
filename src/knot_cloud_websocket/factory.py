@@ -6,6 +6,9 @@ from contextlib import asynccontextmanager
 
 import websockets
 
+from .client import Client
+from .exception import AuthenticationError
+from .message import ReadyResponseMessage
 from .uri import build_uri
 
 FIVE_SECONDS = 5
@@ -45,6 +48,17 @@ async def _create_socket(uri, use_ssl):
         yield socket
 
 
+def _create_client(socket):
+    return Client(socket)
+
+
+async def _identify(client, credential_id, credential_token):
+    await client.identity(credential_id, credential_token)
+    response = await client.receive()
+    if not isinstance(response, ReadyResponseMessage):
+        raise AuthenticationError(response)
+
+
 @asynccontextmanager
 async def create_connection(*,
                             protocol='wss',
@@ -66,4 +80,6 @@ async def create_connection(*,
     uri = build_uri(protocol, hostname, port, pathname)
 
     async with _create_socket(uri, protocol == 'wss' or None) as socket:
-        yield socket
+        client = _create_client(socket)
+        await _identify(client, credential_id, credential_token)
+        yield client
