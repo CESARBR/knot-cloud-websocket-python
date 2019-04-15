@@ -34,3 +34,14 @@ class ErrorResponseMessage:
     code: int
     message: str
     type: str = 'error'
+
+
+@dataclass
+class DataEventMessage:
+    '''
+    Represents 'data' event
+    '''
+
+    id: str
+    sensorId: int
+    value: type(None)

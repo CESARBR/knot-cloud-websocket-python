@@ -6,7 +6,8 @@ from websockets.client import WebSocketClientProtocol
 from jsonequals import are_json_equal
 from knot_cloud_websocket.client import Client
 from knot_cloud_websocket.exception import UnknownMessageError
-from knot_cloud_websocket.message import (ErrorResponseMessage,
+from knot_cloud_websocket.message import (DataEventMessage,
+                                          ErrorResponseMessage,
                                           ReadyResponseMessage)
 
 
@@ -96,6 +97,35 @@ async def test_receive_should_return_error_response_message_details_when_error_f
     actual = await client.receive()
 
     assert actual == expected, "Should return ErrorResponseMessage details"
+
+
+@pytest.mark.asyncio
+async def test_receive_should_return_data_event_when_data_event_frame(socket):
+    result = '{ "type": "data", "data": { "from": "abcdef", "payload": { "sensorId": 1, "value": 10 } } }'
+    recv = asyncio.Future()
+    recv.set_result(result)
+    socket.recv.return_value = recv
+    client = Client(socket)
+
+    message = await client.receive()
+
+    assert isinstance(message,
+                      DataEventMessage), "Should return DataEventMessage"
+
+
+@pytest.mark.asyncio
+async def test_receive_should_return_data_event_details_when_data_event_frame(
+        socket):
+    expected = DataEventMessage('abcdef', 1, 10)
+    result = '{ "type": "data", "data": { "from": "abcdef", "payload": { "sensorId": 1, "value": 10 } } }'
+    recv = asyncio.Future()
+    recv.set_result(result)
+    socket.recv.return_value = recv
+    client = Client(socket)
+
+    actual = await client.receive()
+
+    assert actual == expected, "Should return DataEventMessage details"
 
 
 @pytest.mark.asyncio
