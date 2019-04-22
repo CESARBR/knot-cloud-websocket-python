@@ -22,6 +22,30 @@
       "revId": "d38c97642a917ace5c6c4b9e71d82b7d4a1a90b4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2104f7d0_04fbdfa3",
+        "filename": "pyproject.toml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1013086
+      },
+      "writtenOn": "2019-04-22T17:07:54Z",
+      "side": 1,
+      "message": "I think this is the name that is used in a package repository (PyPI). I\u0027d rather not include the python suffix, as there will only be python packages in it.",
+      "parentUuid": "3fc054a4_1c83bcc4",
+      "range": {
+        "startLine": 2,
+        "startChar": 8,
+        "endLine": 2,
+        "endChar": 28
+      },
+      "revId": "d38c97642a917ace5c6c4b9e71d82b7d4a1a90b4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
