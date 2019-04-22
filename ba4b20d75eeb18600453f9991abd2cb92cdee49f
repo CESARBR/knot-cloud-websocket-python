@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b45abcee_9fbd26e2",
+        "filename": "src/knot_cloud_websocket/factory.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1013169
+      },
+      "writtenOn": "2019-04-22T12:52:20Z",
+      "side": 1,
+      "message": "Is this parameter being used in `_create_socket()` method? Doesn\u0027t the second parameter `use_ssl` suggests that it should be a boolean?",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
