@@ -22,6 +22,30 @@
       "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ba9972e_431b80dd",
+        "filename": "src/knot_cloud_websocket/factory.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1013086
+      },
+      "writtenOn": "2019-04-22T17:14:18Z",
+      "side": 1,
+      "message": "I see, maybe the argument name is not the best. The thing is: the `ssl` argument in `websockets.connect` receives an SSL context (or `None` when it shouldn\u0027t use SSL), but to use the default context, you can pass `True` (https://websockets.readthedocs.io/en/stable/intro.html#secure-example). As we are either using the default context or not using SSL, I called it `use_ssl`. I\u0027m going to refactor this.",
+      "parentUuid": "b45abcee_9fbd26e2",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
