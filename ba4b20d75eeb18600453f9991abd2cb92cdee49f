@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "af7013e5_5039924e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1013086
+      },
+      "writtenOn": "2019-04-23T21:48:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebb135b9_0099c4f9",
+      "range": {
+        "startLine": 25,
+        "startChar": 10,
+        "endLine": 25,
+        "endChar": 14
+      },
+      "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b45abcee_9fbd26e2",
         "filename": "src/knot_cloud_websocket/factory.py",
         "patchSetId": 1
@@ -69,6 +93,30 @@
       "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ccc76562_dc9cbad0",
+        "filename": "src/knot_cloud_websocket/factory.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1013086
+      },
+      "writtenOn": "2019-04-23T21:48:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ba9972e_431b80dd",
+      "range": {
+        "startLine": 68,
+        "startChar": 35,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "ba4b20d75eeb18600453f9991abd2cb92cdee49f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
