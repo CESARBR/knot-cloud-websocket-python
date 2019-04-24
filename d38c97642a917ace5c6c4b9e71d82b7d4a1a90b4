@@ -46,6 +46,30 @@
       "revId": "d38c97642a917ace5c6c4b9e71d82b7d4a1a90b4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8c4d1fbc_7f1ddf1b",
+        "filename": "pyproject.toml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1013169
+      },
+      "writtenOn": "2019-04-24T16:01:07Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "2104f7d0_04fbdfa3",
+      "range": {
+        "startLine": 2,
+        "startChar": 8,
+        "endLine": 2,
+        "endChar": 28
+      },
+      "revId": "d38c97642a917ace5c6c4b9e71d82b7d4a1a90b4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
